@@ -14,13 +14,13 @@
     +	AVD Manager
     +	Activities
     +	Activity Lifecycle
-3. [Views](https://docs.google.com/presentation/d/1z9OAuYN5-sFVXl6mwFuhmaW1Ryo3-n6b4OpudBS2UAg/edit?usp=sharing)
-    +	Views
-    +	Manipulação de Views
-    +	List Views
-4. [Intents](https://docs.google.com/presentation/d/1GrOfxe6JsgT7TEm2NvohQjMBSNdtcUAq5obqZTmVx_Y/edit?usp=sharing)
+3. [Intents](https://docs.google.com/presentation/d/1GrOfxe6JsgT7TEm2NvohQjMBSNdtcUAq5obqZTmVx_Y/edit?usp=sharing)
     +	Intents
     +	Serializable ou Parcelable?
+4. [Views](https://docs.google.com/presentation/d/1z9OAuYN5-sFVXl6mwFuhmaW1Ryo3-n6b4OpudBS2UAg/edit?usp=sharing)
+    +	Views
+    +	Manipulação de Views
+    +	ListView/RecyclerView    
 5.  [Menus e Dialogs](https://docs.google.com/presentation/d/14KVOkM1-0HZrT_wmBsEoxH7sNMWPtGBwYJEtoj2uBDY/edit?usp=sharing)
     +	*Action Bar Menu (teoria)*
     +	*Context Menu (teoria)*
