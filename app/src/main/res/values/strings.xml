@@ -1,11 +1,13 @@
 <resources>
     <string name="app_name">SemIF</string>
 
-    <!-- Hints -->
+    <!-- Labels -->
     <string name="hint_email">Email</string>
-    <string name="hint_pass">Senha</string>
+    <string name="hint_pass">Password</string>
 
-    <!-- Textos -->
-    <string name="txt_login">Entrar</string>
+    <!-- Texts -->
+    <string name="txt_login">Login</string>
+
+    <!-- Messages -->
     <string name="msg_required">Required field.</string>
 </resources>
