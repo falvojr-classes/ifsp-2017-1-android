@@ -62,5 +62,8 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
+        //TODO (8) i18n
+        // https://developer.android.com/guide/topics/resources/localization.html
     }
 }
