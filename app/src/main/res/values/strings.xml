@@ -7,4 +7,5 @@
 
     <!-- Textos -->
     <string name="txt_login">Entrar</string>
+    <string name="msg_required">Required field.</string>
 </resources>
