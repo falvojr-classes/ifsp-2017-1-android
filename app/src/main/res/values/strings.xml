@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">SemIF</string>
+
+    <!-- Hints -->
+    <string name="hint_email">Email</string>
+    <string name="hint_pass">Senha</string>
+
+    <!-- Textos -->
+    <string name="txt_login">Entrar</string>
+</resources>
