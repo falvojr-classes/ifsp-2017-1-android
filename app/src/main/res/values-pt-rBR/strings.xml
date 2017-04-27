@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SemIF</string>
+
+    <!-- Labels -->
+    <string name="hint_email">Email</string>
+    <string name="hint_pass">Senha</string>
+
+    <!-- Texts -->
+    <string name="txt_login">Entrar</string>
+
+    <!-- Messages -->
+    <string name="msg_required">Campo obrigatório.</string>
+    <string name="msg_hello">Olá %s!</string>
+
+</resources>

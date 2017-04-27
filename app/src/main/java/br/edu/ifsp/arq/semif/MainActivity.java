@@ -1,6 +1,7 @@
 package br.edu.ifsp.arq.semif;
 
 import android.content.Intent;
+import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -14,6 +15,8 @@ public class MainActivity extends AppCompatActivity {
 
     private EditText mEtEmail;
     private EditText mEtPassword;
+    private TextInputLayout mTilEmail;
+    private TextInputLayout mTilPassword;
     private Button mBtLogin;
 
     @Override
@@ -26,44 +29,49 @@ public class MainActivity extends AppCompatActivity {
         mEtPassword = (EditText) findViewById(R.id.etSenha);
         mBtLogin = (Button) findViewById(R.id.btEntrar);
 
-        //TODO (6) Utilizar o conceito de label flutuante (Material Design)
+        //FEITO (6) Utilizar o conceito de label flutuante (Material Design)
         // http://stackoverflow.com/a/30571825/3072570
+        mTilEmail = (TextInputLayout) findViewById(R.id.tilEmail);
+        mTilPassword = (TextInputLayout) findViewById(R.id.tilSenha);
 
         // Configura um evento de click para o nosso botão:
         mBtLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //TODO (7) Ajustar as validações (usando TextInputLayout)
+                //FEITO (7) Ajustar as validações (usando TextInputLayout)
                 // http://stackoverflow.com/q/30953449/3072570
 
                 // Valida os campos Email e Senha:
                 boolean isValid = true;
                 if (TextUtils.isEmpty(mEtEmail.getText())) {
-                    mEtEmail.setError(getString(R.string.msg_required));
+                    mTilEmail.setError(getString(R.string.msg_required));
                     isValid = false;
                 } else {
-                    mEtEmail.setError(null);
+                    mTilEmail.setErrorEnabled(false);
                 }
                 if (TextUtils.isEmpty(mEtPassword.getText())) {
-                    mEtPassword.setError(getString(R.string.msg_required));
+                    mTilPassword.setError(getString(R.string.msg_required));
                     isValid = false;
                 } else {
-                    mEtPassword.setError(null);
+                    mTilPassword.setErrorEnabled(false);
                 }
                 if (isValid) {
                     // Caso os campos sejam válidos, criamos um objeto "User":
                     final User user = new User();
                     user.setEmail(mEtEmail.getText().toString());
 
-                    //TODO (1) Redirecionar para a ListViewActivity via Intent (falar sobre Parcelable)
+                    //FEITO (1) Redirecionar para a ListViewActivity via Intent (falar sobre Parcelable)
                     // https://developer.android.com/training/basics/firstapp/starting-activity.html
+                    Intent i = new Intent(MainActivity.this, ListViewActivity.class);
+                    i.putExtra(ListViewActivity.KEY_USER, user);
+                    startActivity(i);
 
-                    //TODO (2) Registrar a ListViewActivity no AndroidManifest.xml
+                    //FEITO (2) Registrar a ListViewActivity no AndroidManifest.xml
                 }
             }
         });
 
-        //TODO (8) i18n
+        //FEITO (8) i18n
         // https://developer.android.com/guide/topics/resources/localization.html
     }
 }

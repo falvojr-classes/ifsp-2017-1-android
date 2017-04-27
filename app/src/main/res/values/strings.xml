@@ -10,4 +10,5 @@
 
     <!-- Messages -->
     <string name="msg_required">Required field.</string>
+    <string name="msg_hello">Hello %s!</string>
 </resources>

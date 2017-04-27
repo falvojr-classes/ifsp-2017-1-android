@@ -8,6 +8,9 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
+
+import br.edu.ifsp.arq.semif.entity.User;
 
 public class ListViewActivity extends AppCompatActivity {
 
@@ -27,6 +30,7 @@ public class ListViewActivity extends AppCompatActivity {
 
     private ListView mListView;
     private ArrayAdapter<String> mAdapter;
+    private User mUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,8 +47,11 @@ public class ListViewActivity extends AppCompatActivity {
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                //TODO (4) Realizar uma chamada telefônica via Intent
+                //FEITO (4) Realizar uma chamada telefônica via Intent
                 // http://stackoverflow.com/a/13123613/3072570
+                Uri tel = Uri.parse("tel:" + PHONES[position]);
+                Intent i = new Intent(Intent.ACTION_DIAL, tel);
+                startActivity(i);
             }
         });
 
@@ -52,14 +59,23 @@ public class ListViewActivity extends AppCompatActivity {
         mListView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
-                //TODO (5) Realizar compartilhamento via Intent
+                //FEITO (5) Realizar compartilhamento via Intent
                 // https://developer.android.com/training/sharing/send.html
-                return false;
+                Intent i = new Intent();
+                i.setAction(Intent.ACTION_SEND);
+                i.putExtra(Intent.EXTRA_TEXT, mUser.getEmail());
+                i.setType("text/plain");
+                startActivity(i);
+                return true;
             }
         });
 
-        //TODO (3) Dizer "Olá" para o usuário logado (via Toast ou Snackbar)
+        //FEITO (3) Dizer "Olá" para o usuário logado (via Toast ou Snackbar)
         // https://developer.android.com/guide/topics/ui/notifiers/toasts.html
         // https://developer.android.com/training/snackbar/action.html
+        mUser = getIntent().getParcelableExtra(KEY_USER);
+        String msg = getString(R.string.msg_hello, mUser.getEmail());
+        Toast.makeText(this, msg, Toast.LENGTH_LONG).show();
+
     }
 }
