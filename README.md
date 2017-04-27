@@ -35,3 +35,9 @@
     +	*Exportação de APK (teoria)*
     +	*ProGuard (teoria)*
     +	*Google Play Store (teoria)*
+    
+## Links Úteis
+
++ [Udacity](https://www.udacity.com/courses/android) (é só filtrar por cursos grátis)
++ Canal [Thiengo Calopsita](https://www.youtube.com/user/thiengoCalopsita)
++ Canal [slidenerd](https://www.youtube.com/user/slidenerd)
